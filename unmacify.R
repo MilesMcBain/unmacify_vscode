@@ -2,12 +2,6 @@ library(curl)
 library(jsonlite)
 library(tidyverse)
 
-# fetch default mac keybindings
-curl_fetch_disk(
-  "https://raw.githubusercontent.com/codebling/vs-code-default-keybindings/master/macos.keybindings.json",
-  "macos.keybindings.json"
-)
-
 # fetch my keybindings
 curl_fetch_disk(
   "https://raw.githubusercontent.com/MilesMcBain/vsconfig/master/keybindings.json",
@@ -15,7 +9,7 @@ curl_fetch_disk(
 )
 
 mac_os_keybindings <-
-  fromJSON("./macos.keybindings.json")
+  fromJSON("./my.macos.default.keybindings.json")
 
 my_keybindings <-
   fromJSON("./my.keybindings.json")
