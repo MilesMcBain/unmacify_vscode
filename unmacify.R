@@ -58,10 +58,10 @@ swapped_mac_os_bindings <-
     by = c(command = "old_command", when = "when")
   ) |>
   mutate(
-    command = gsub("cmd", "xxx", key),
-    command = gsub("ctrl", "yyy", key),
-    command = gsub("xxx", "ctrl", key),
-    command = gsub("yyy", "cmd", key)
+    key = gsub("cmd", "xxx", key),
+    key = gsub("ctrl", "yyy", key),
+    key = gsub("xxx", "ctrl", key),
+    key = gsub("yyy", "cmd", key)
   )
 
 # bind them all into one config and write out
